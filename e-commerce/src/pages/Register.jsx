@@ -22,7 +22,13 @@ const Register = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen px-4 bg-gradient-to-r from-purple-500 to-blue-500">
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-gradient-to-r from-purple-500 to-blue-500">
+
+      {/* Website Heading */}
+      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6 tracking-wide drop-shadow-lg">
+        E-Commerce Store
+      </h1>
+
       <form
         onSubmit={handleSubmit}
         className="bg-white p-6 sm:p-8 rounded-xl shadow-xl w-full max-w-md"

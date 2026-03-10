@@ -17,7 +17,7 @@ const Navbar = ({ toggleSidebar }) => {
       </button>
 
       <h1 className="text-lg md:text-2xl font-bold text-white">
-        E-Commerce
+        E-Commerce 
       </h1>
 
       <div className="flex items-center gap-2 md:gap-4">

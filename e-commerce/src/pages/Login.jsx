@@ -28,18 +28,25 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen px-4 bg-gradient-to-r from-blue-500 to-purple-600">
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-gradient-to-r from-blue-500 to-purple-600">
+
+      {/* Website Name */}
+      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6 tracking-wide drop-shadow-lg">
+        E-Commerce Store
+      </h1>
+
       <form
         onSubmit={handleLogin}
         className="bg-white p-6 sm:p-8 rounded-xl shadow-xl w-full max-w-md"
       >
-        <h1 className="text-xl sm:text-2xl font-bold mb-2 text-center">
-          Welcome E-Commerce
-        </h1>
 
-        <h3 className="text-lg sm:text-xl font-semibold mb-6 text-center">
+        <h2 className="text-xl sm:text-2xl font-bold mb-2 text-center">
           Login
-        </h3>
+        </h2>
+
+        <p className="text-sm text-gray-500 text-center mb-6">
+          Access your account to continue
+        </p>
 
         <input
           type="email"
@@ -55,16 +62,17 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button className="bg-green-500 hover:bg-green-600 text-white w-full p-3 rounded transition">
+        <button className="bg-green-500 hover:bg-green-600 text-white w-full p-3 rounded-lg transition duration-300 hover:shadow-lg">
           Login
         </button>
 
         <p className="text-sm text-center mt-4">
           Don't have an account?
-          <Link to="/" className="text-blue-500 ml-1">
+          <Link to="/" className="text-blue-500 ml-1 hover:underline">
             Register
           </Link>
         </p>
+
       </form>
     </div>
   );
