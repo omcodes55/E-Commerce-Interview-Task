@@ -76,8 +76,7 @@ const Cart = () => {
           ${totalPrice.toFixed(2)}
         </h2>
       </div>
-    </DashboardLayout>
+    </DashboardLayout> 
   );
 };
-
 export default Cart;
