@@ -71,7 +71,6 @@ const Cart = () => {
       {/* Total */}
       <div className="mt-8 bg-white shadow rounded-xl p-4 md:p-5 flex justify-between items-center">
         <h2 className="text-base md:text-lg font-semibold">Total</h2>
-
         <h2 className="text-lg md:text-xl font-bold text-blue-600">
           ${totalPrice.toFixed(2)}
         </h2>
