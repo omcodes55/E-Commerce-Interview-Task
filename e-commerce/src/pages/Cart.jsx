@@ -78,4 +78,5 @@ const Cart = () => {
     </DashboardLayout> 
   );
 };
+
 export default Cart;
