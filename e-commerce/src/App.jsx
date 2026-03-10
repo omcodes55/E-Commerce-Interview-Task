@@ -1,17 +1,27 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
+
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
+import Products from "./pages/Products";
+import Cart from "./pages/Cart";
+import Profile from "./pages/Profile";
+
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <Routes>
+      <Route path="/" element={<Register />} />
+      <Route path="/login" element={<Login />} />
 
-      <Routes>
-        <Route path="/" element={<h1 className="text-3xl text-center mt-10">Login Page</h1>} />
-        <Route path="/register" element={<h1 className="text-3xl text-center mt-10">Register Page</h1>} />
-        <Route path="/dashboard" element={<h1 className="text-3xl text-center mt-10">Dashboard</h1>} />
-      </Routes>
-
-    </div>
+      <Route element={<ProtectedRoute />}>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/profile" element={<Profile />} />
+      </Route>
+    </Routes>
   );
 }
 
