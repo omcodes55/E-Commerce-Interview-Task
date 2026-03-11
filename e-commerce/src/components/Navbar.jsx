@@ -6,7 +6,7 @@ const Navbar = ({ toggleSidebar }) => {
 
   const logout = () => {
     localStorage.removeItem("session");
-    navigate("/");
+    navigate("/login");
   };
 
   return (
